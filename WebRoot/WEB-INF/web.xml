@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" 
+    xmlns="http://java.sun.com/xml/ns/javaee" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+    http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+	<welcome-file-list>
+		<welcome-file>index1.jsp</welcome-file>
+	</welcome-file-list>
+	 
+	<servlet>
+		<servlet-name>fileDemo</servlet-name>
+		<servlet-class>com.demo.servlet.FileUpLoadServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>fileDemo</servlet-name>
+		<url-pattern>/saveFile.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>download</servlet-name>
+		<servlet-class>com.demo.servlet.FileDownLoadServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>download</servlet-name>
+		<url-pattern>/download.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>smartup</servlet-name>
+		<servlet-class>com.demo.smart.SmartUploadServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>smartup</servlet-name>
+		<url-pattern>/smartup.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>smartdown</servlet-name>
+		<servlet-class>com.demo.smart.SmartDownloadServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>smartdown</servlet-name>
+		<url-pattern>/download.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>batch</servlet-name>
+		<servlet-class>com.demo.smart.BatchSmartDownloadServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>batch</servlet-name>
+		<url-pattern>/batchDownloadServlet.do</url-pattern>
+	</servlet-mapping>
+</web-app>

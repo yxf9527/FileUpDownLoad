@@ -1,0 +1,7 @@
+servlet包下面是通过serlvet和流实现文件上传和下载：
+	上传主要注意获取前台提交的流之后进行解析
+	下载注意设置头文件
+	
+smart包下实现通过smartUpDownLoad组建实现文件的上传下载（需要导入smartupdownload.jar包）
+通过可实现批量的上传和下载
+
